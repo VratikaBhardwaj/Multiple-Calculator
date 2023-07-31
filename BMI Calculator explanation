@@ -1,1 +1,27 @@
+// this is BMI Script
+function mybmi() {
+  // Get the weight and height values entered by the user.
+  var kg = document.getElementById("weight").value;
+  var mt = document.getElementById("height").value;
+
+  // Calculate the BMI (Body Mass Index) and store it in the "bmiresult" input field.
+  document.getElementById("bmiresult").value = kg / (mt * mt);
+
+  // The curly brace below is misplaced and should be removed to avoid unnecessary nesting.
+}
+
+// The myhealth() function should be defined outside the mybmi() function, not inside it.
+function myhealth() {
+  // Get the calculated BMI value from the "bmiresult" input field.
+  var bmiresult = document.getElementById("bmiresult").value;
+
+  // Check the BMI range and update the "healthy" element with the appropriate message.
+  if (bmiresult >= 18.5 && bmiresult <= 24.9) {
+    document.getElementById("healthy").innerHTML = "you are in a healthy weight range";
+  } else if (bmiresult >= 25.0 && bmiresult <= 29.9) {
+    document.getElementById("healthy").innerHTML = "you are overweight";
+  } else {
+    document.getElementById("healthy").innerHTML = "you are underweight";
+  }
+}
 

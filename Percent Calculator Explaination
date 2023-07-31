@@ -1,1 +1,7 @@
+var per = document.getElementById("percent").value;: This line retrieves the value entered by the user in the input field with the ID "percent" and assigns it to the variable per. The "percent" input field is expected to contain the percentage value the user wants to calculate.
 
+var num = document.getElementById("number").value;: This line retrieves the value entered by the user in the input field with the ID "number" and assigns it to the variable num. The "number" input field is expected to contain the number (or value) to which the percentage will be applied.
+
+var res = (num / 100) * per;: This line calculates the result by first converting the percentage to a decimal (by dividing it by 100) and then multiplying it by the number. The result is stored in the variable res.
+
+document.getElementById("result").value = res;: This line sets the calculated result (res) as the value of the input field with the ID "result." The "result" input field is where the final percentage calculation will be displayed to the user.

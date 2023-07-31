@@ -1,1 +1,111 @@
-index
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Percent Calculator -->
+
+        <div class="percent-section">
+            <h1 class="heading">Percent Calculator</h1>
+
+            <div class="percent-form">
+                <div class="blocks">
+                    <h3>Write the percent.</h3>
+                    <input type="number" id="percent">
+                </div>
+                <div class="blocks">
+                    <h3>Write the number.</h3>
+                    <input type="number" id="number">
+                </div>
+                <div><button class="enter" onclick="mypercent()">Enter</button></div>
+                <div class="blocks">
+                    <h3>Result</h3>
+                    <input type="text" id="result" readonly>
+                </div>
+            </div>
+        </div>
+
+        <!-- Basic Calculator -->
+        <div class="calculator">
+            <h1 class="heading">Basic Calculator</h1>
+            <form>
+                <div class="display">
+                    <input type="text" name="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="display.value = ''">
+                    <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1) ">
+                    <input type="button" value="." onclick="display.value += '.'">
+                    <input type="button" value="/" onclick="display.value += '/'">
+                </div>
+                <div>
+                    <input type="button" value="9" onclick="display.value += '9'">
+                    <input type="button" value="8" onclick="display.value += '8'">
+                    <input type="button" value="7" onclick="display.value += '7'">
+                    <input type="button" value="+" onclick="display.value += '+'">
+                </div>
+                <div>
+                    <input type="button" value="6" onclick="display.value += '6'">
+                    <input type="button" value="5" onclick="display.value += '5'">
+                    <input type="button" value="4" onclick="display.value += '4'">
+                    <input type="button" value="-" onclick="display.value += '-'">
+                </div>
+                <div>
+                    <input type="button" value="3" onclick="display.value += '3'">
+                    <input type="button" value="2" onclick="display.value += '2'">
+                    <input type="button" value="1" onclick="display.value += '1'">
+                    <input type="button" value="*" onclick="display.value += '*'">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="display.value +='00'">
+                    <input type="button" value="0" onclick="display.value +='0'">
+                    <input type="button" value="%" onclick="display.value +='%'">
+                    <input type="button" value="=" onclick="display.value = eval(display.value)">
+                </div>
+
+            </form>
+        </div>
+
+        <div class="bmi-section">
+            <h1 class="heading">BMI Calculator</h1>
+
+            <div class="bmi-form">
+                <div class="blocks">
+                    <h3>Write the Weight(in kg).</h3>
+                    <input type="number" id="weight">
+                </div>
+                <div class="blocks">
+                    <h3>Write the Height (in m).</h3>
+                    <input type="number" id="height">
+                </div>
+                <div><button class="enter" onclick="mybmi()">Enter</button></div>
+                <div class="blocks">
+                    <h3>Result</h3>
+                    <input type="text" id="bmiresult" readonly>
+                </div>
+                <!-- <div class="blocks">
+                    <h3>Are you healthy?</h3>
+                    <p class="health" id="healthy" onclick="mybmi(myhealth())"></p>
+                </div> -->
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+
+</html>
